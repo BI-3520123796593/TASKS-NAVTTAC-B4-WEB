@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Months Example</title>
+</head>
+<body>
+  <h1>Months Example</h1>
+
+  <div id="months"></div>
+
+  <script>
+    var monthsElement = document.getElementById("months");
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+    var monthsString = "";
+
+    for (var i = 0; i < months.length; i++) {
+      monthsString += months[i] + ", ";
+    }
+
+    monthsString = monthsString.slice(0, -2); // Remove the extra comma and space at the end
+
+    monthsElement.textContent = "Months: " + monthsString;
+  </script>
+</body>
+</html>

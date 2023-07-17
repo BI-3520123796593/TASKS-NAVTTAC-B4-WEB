@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greeting Example</title>
+</head>
+<body>
+  <h1>Greeting Example</h1>
+
+  <div id="greeting"></div>
+
+  <script>
+    var greetingElement = document.getElementById("greeting");
+    var currentTime = new Date();
+    var currentHour = currentTime.getHours();
+
+    if (currentHour < 12) {
+      greetingElement.textContent = "Good Morning";
+    } else {
+      greetingElement.textContent = "Good Afternoon";
+    }
+  </script>
+</body>
+</html>

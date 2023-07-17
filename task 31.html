@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factorial Calculation</title>
+</head>
+<body>
+  <h1>Factorial Calculation</h1>
+
+  <form method="post">
+    <label for="number">Enter a number:</label>
+    <input type="number" name="number" id="number" required>
+    <button type="submit">Calculate Factorial</button>
+  </form>
+
+  <?php
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $number = $_POST["number"];
+
+    $factorial = 1;
+
+    if ($number >= 0) {
+      for ($i = 1; $i <= $number; $i++) {
+        $factorial *= $i;
+      }
+
+      echo "<p>The factorial of $number is: $factorial</p>";
+    } else {
+      echo "<p>Please enter a non-negative number.</p>";
+    }
+  }
+  ?>
+</body>
+</html>

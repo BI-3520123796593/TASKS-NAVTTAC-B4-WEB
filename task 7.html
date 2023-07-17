@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Information Form</title>
+</head>
+<body>
+  <h1>Information Form</h1>
+  
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" placeholder="Enter your address" required></textarea><br><br>
+    
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="USA">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">UK</option>
+      <option value="Australia">Australia</option>
+      <option value="Germany">Germany</option>
+      <option value="India">India</option>
+      <option value="Other">Other</option>
+    </select><br><br>
+    
+    <label for="gender">Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+    
+    <label for="hobbies">Hobbies:</label><br>
+    <input type="checkbox" id="reading" name="hobbies" value="reading">
+    <label for="reading">Reading</label><br>
+    <input type="checkbox" id="painting" name="hobbies" value="painting">
+    <label for="painting">Painting</label><br>
+    <input type="checkbox" id="sports" name="hobbies" value="sports">
+    <label for="sports">Sports</label><br><br>
+    
+    <label for="website">Website Link:</label>
+    <input type="text" id="website" name="website" placeholder="Enter your website link"><br><br>
+    
+    <label for="otherInfo">Other Information:</label><br>
+    <textarea id="otherInfo" name="otherInfo" placeholder="Enter any other information"></textarea><br><br>
+    
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear Form">
+  </form>
+</body>
+</html>

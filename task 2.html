@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comment Page</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $( "#includedContent" ).load( "IIncluded.html" ); // Load the contents of IIncluded.html
+    });
+  </script>
+</head>
+<body>
+  <h1>Comment Page</h1>
+  
+  <!-- Commented Text -->
+  <!-- I am Comment -->
+  
+  <h2>Internal Text</h2>
+  <p>I am Internal Text</p>
+  
+  <h2>Included Content</h2>
+  <div id="includedContent"></div> <!-- Display the contents of IIncluded.html here -->
+</body>
+</html>

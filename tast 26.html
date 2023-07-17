@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Day Example</title>
+</head>
+<body>
+  <h1>Current Day Example</h1>
+
+  <div id="currentDay"></div>
+
+  <script>
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var currentDay = new Date().getDay();
+    var currentDayElement = document.getElementById("currentDay");
+    
+    currentDayElement.textContent = "Today is " + days[currentDay];
+  </script>
+</body>
+</html>

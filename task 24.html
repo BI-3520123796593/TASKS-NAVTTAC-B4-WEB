@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hide and Show Example</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hide and Show Example</h1>
+
+  <button onclick="hideParagraph()">Hide</button>
+  <button onclick="showParagraph()">Show</button>
+
+  <p id="myParagraph">This is a paragraph that will be hidden or shown.</p>
+
+  <script>
+    function hideParagraph() {
+      var paragraph = document.getElementById("myParagraph");
+      paragraph.classList.add("hidden");
+    }
+
+    function showParagraph() {
+      var paragraph = document.getElementById("myParagraph");
+      paragraph.classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>

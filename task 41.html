@@ -1,0 +1,59 @@
+laravel new relationship-app
+php artisan make:model User
+php artisan make:model Profile
+
+
+public function profile()
+{
+    return $this->hasOne(Profile::class);
+}
+
+
+
+
+php artisan make:model Post
+php artisan make:model Comment
+
+
+
+public function comments()
+{
+    return $this->hasMany(Comment::class);
+}
+
+
+
+public function post()
+{
+    return $this->belongsTo(Post::class);
+}
+
+
+
+
+php artisan make:model Image
+php artisan make:model Video
+php artisan make:model Commentable
+
+
+
+public function comments()
+{
+    return $this->morphMany(Comment::class, 'commentable');
+}
+
+php artisan make:controller UserController --resource
+php artisan make:controller ProfileController --resource
+php artisan make:controller PostController --resource
+php artisan make:controller CommentController --resource
+php artisan make:controller ImageController --resource
+php artisan make:controller VideoController --resource
+
+
+
+Route::resource('users', UserController::class);
+Route::resource('profiles', ProfileController::class);
+Route::resource('posts', PostController::class);
+Route::resource('comments', CommentController::class);
+Route::resource('images', ImageController::class);
+Route::resource('videos', VideoController::class);

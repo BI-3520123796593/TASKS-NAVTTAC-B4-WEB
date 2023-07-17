@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Calculator</title>
+</head>
+<body>
+  <h1>JavaScript Calculator</h1>
+
+  <label for="num1">Number 1:</label>
+  <input type="number" id="num1">
+
+  <label for="operator">Operator:</label>
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+  </select>
+
+  <label for="num2">Number 2:</label>
+  <input type="number" id="num2">
+
+  <div id="result"></div>
+
+  <script>
+    function calculate() {
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var operator = document.getElementById("operator").value;
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var resultElement = document.getElementById("result");
+
+      var result;
+
+      if (operator === "+") {
+        result = num1 + num2;
+      } else if (operator === "-") {
+        result = num1 - num2;
+      } else if (operator === "*") {
+        result = num1 * num2;
+      } else {
+        result = "Invalid operator";
+      }
+
+      resultElement.textContent = "Result: " + result;
+    }
+
+    // Automatically calculate on input change
+    document.getElementById("num1").addEventListener("input", calculate);
+    document.getElementById("operator").addEventListener("input", calculate);
+    document.getElementById("num2").addEventListener("input", calculate);
+  </script>
+</body>
+</html>
